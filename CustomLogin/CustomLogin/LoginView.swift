@@ -150,11 +150,49 @@ class LoginView: UIControl {
     }
     
     func updateViews(strength: Strength) {
+        if strength != self.strength {
+            switch strength {
+            case .weak:
+                strengthLabel.text = "Too weak"
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.weakView.backgroundColor = self.weakColor
+                    self.weakView.transform = CGAffineTransform(scaleX: 1.0, y: 1.6)
+                    self.mediumView.backgroundColor = self.unusedColor
+                    self.strongView.backgroundColor = self.unusedColor
+                }) { completed in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.weakView.transform = .identity
+                    })
+                }
+            case .medium:
+                strengthLabel.text = "Could be stronger"
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.weakView.backgroundColor = self.weakColor
+                    self.mediumView.backgroundColor = self.mediumColor
+                    self.mediumView.transform = CGAffineTransform(scaleX: 1.0, y: 1.6)
+                    self.strongView.backgroundColor = self.unusedColor
+                }) { completed in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.mediumView.transform = .identity
+                    })
+                }
+            case .strong:
+                strengthLabel.text = "Strong password"
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.weakView.backgroundColor = self.weakColor
+                    self.mediumView.backgroundColor = self.mediumColor
+                    self.strongView.backgroundColor = self.strongColor
+                    self.strongView.transform = CGAffineTransform(scaleX: 1.0, y: 1.6)
+                }) { completed in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.strongView.transform = .identity
+                    })
+                }
+            }
+        }
         self.strength = strength
     }
-    
-    
-    
+
 }
 
 // MARK: - UITextFieldDelegate

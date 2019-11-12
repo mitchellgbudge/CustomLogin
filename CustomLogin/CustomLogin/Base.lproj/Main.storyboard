@@ -15,17 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ue-N2-hVT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-2C-FMb" customClass="LoginView" customModule="CustomLogin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="384" width="374" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0ue-N2-hVT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BlB-Bn-2zG"/>
-                            <constraint firstItem="0ue-N2-hVT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Yqd-qu-lJ7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ue-N2-hVT" secondAttribute="trailing" id="cj2-iu-Vjq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ue-N2-hVT" secondAttribute="bottom" id="mvu-sq-uLF"/>
+                            <constraint firstItem="HBU-2C-FMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="340" id="6bV-Bm-P5H"/>
+                            <constraint firstItem="HBU-2C-FMb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hEL-P7-gIV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HBU-2C-FMb" secondAttribute="trailing" constant="20" id="rHJ-yr-X7c"/>
+                            <constraint firstItem="HBU-2C-FMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tX4-qD-xew"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
