@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginView: UIControl {
+class PasswordView: UIControl {
 
     // MARK: - Properties
     var password: String = ""
@@ -196,7 +196,7 @@ class LoginView: UIControl {
 }
 
 // MARK: - UITextFieldDelegate
-extension LoginView: UITextFieldDelegate {
+extension PasswordView: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let originalText = textField.text!
